@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.appsys.dao.backend.BackendMapper">
+	<!-- 根据用户编码查询用户(也可以用于登录) -->
+	<select id="getBackendByCode" resultType="BackendUser">
+		SELECT * FROM backend_user WHERE userCode = #{userCode}
+	</select>
+</mapper>
